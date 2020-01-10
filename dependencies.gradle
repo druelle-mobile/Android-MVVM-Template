@@ -46,6 +46,7 @@ versions.stetho = '1.5.1'
 versions.junit = '4.12'
 versions.xjunit = '1.1.1'
 versions.espresso = '3.2.0'
+versions.robolectric = '4.2.1'
 
 
 // Define dependencies packages.
@@ -80,6 +81,7 @@ room.ktx = "androidx.room:room-ktx:$versions.room"
 // AAC - Lifecycle / ViewModel / LiveData
 def lifecycle = [:]
 lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
+lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle"
 // Additional libraries
 // Retrofit
 def retrofit = [:]
@@ -121,6 +123,7 @@ deps.sdp = "com.intuit.sdp:sdp-android:$versions.sdp"
 deps.ssp = "com.intuit.ssp:ssp-android:$versions.ssp"
 deps.junit = junit
 deps.espresso = espresso
+deps.robolectric = "org.robolectric:robolectric:$versions.robolectric"
 
 // Define the external variables
 ext.deps = deps
