@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion build_versions.compile_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        applicationId "ovh.geoffrey_druelle.android_mvvm_template"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode version_code
+        versionName version_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Support
+    implementation deps.support.app_compat
+    implementation deps.support.core_ktx
+    implementation deps.support.preference
+    implementation deps.support.material
+    implementation deps.support.legacy
+    implementation deps.support.constraint
+    implementation deps.support.gson
+
+    // Kotlin
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.coroutines_core
+    implementation deps.kotlin.coroutines_android
+
+    // Android Architecture Components
+    // Navigation
+    implementation deps.navigation.ui
+    implementation deps.navigation.fragment
+    // Room
+    implementation deps.room.runtime
+    kapt deps.room.compiler
+    implementation deps.room.ktx
+    // LiveData & ViewModel
+    implementation deps.lifecycle.extensions
+
+    // Retrofit
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.gson
+
+    // Koin
+    implementation deps.koin.core
+    implementation deps.koin.android
+    implementation deps.koin.viewmodel
+
+    // Stetho
+    implementation deps.stetho
+
+    // Picasso
+    implementation deps.picasso
+
+    // Timber
+    implementation deps.timber
+
+    // EasyPermissions
+    implementation deps.easy_permissions
+
+    // SDP & SSP
+    implementation deps.sdp
+    implementation deps.ssp
+
+    // Tests
+    testImplementation deps.koin.test
+    testImplementation deps.junit.junit
+    androidTestImplementation deps.junit.xjunit
+    androidTestImplementation deps.espresso.core
+}
