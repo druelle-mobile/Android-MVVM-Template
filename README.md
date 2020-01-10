@@ -47,6 +47,7 @@ All dependencies are grouped by category. Categories are totally subjective.
     * Lifecycle : extensions
 * Retrofit : runtime & GSON
 * Koin : core, android, viewModel & test
+* RxJava2 & RxAndroid
 * Picasso
 * SSP and SDP (useful libraries for universal and adaptives XML sizes : dp and sp) 
 * EasyPermissions

@@ -28,6 +28,9 @@ versions.lifecycle = '2.1.0'
 versions.retrofit = '2.6.2'
 // Koin
 versions.koin = '2.0.1'
+// Rx
+versions.rx_java2 = '2.2.13'
+versions.rx_android = '2.1.1'
 // Picasso
 versions.picasso = '2.71828'
 // SSP & SDP
@@ -81,6 +84,7 @@ lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecy
 // Retrofit
 def retrofit = [:]
 retrofit.runtime = "com.squareup.retrofit2:retrofit:$versions.retrofit"
+retrofit.rx_java2 = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit"
 retrofit.gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit"
 // Koin
 def koin = [:]
@@ -88,6 +92,10 @@ koin.core = "org.koin:koin-core:$versions.koin"
 koin.android = "org.koin:koin-android:$versions.koin"
 koin.viewmodel = "org.koin:koin-androidx-viewmodel:$versions.koin"
 koin.test = "org.koin:koin-test:$versions.koin"
+// Rx
+def rx = [:]
+rx.rx_java2 = "io.reactivex.rxjava2:rxjava:$versions.rx_java2"
+rx.rx_android = "io.reactivex.rxjava2:rxandroid:$versions.rx_android"
 // Tests
 def junit = [:]
 junit.junit = "junit:junit:$versions.junit"
@@ -104,6 +112,7 @@ deps.room = room
 deps.lifecycle = lifecycle
 deps.retrofit = retrofit
 deps.koin = koin
+deps.rx = rx
 deps.stetho = "com.facebook.stetho:stetho:$versions.stetho"
 deps.picasso = "com.squareup.picasso:picasso:$versions.picasso"
 deps.timber = "com.jakewharton.timber:timber:$versions.timber"

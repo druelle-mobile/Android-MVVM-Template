@@ -17,9 +17,30 @@ android {
     }
     buildTypes {
         release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            resValue "string", "app_name", "android-mvvm-template"
+        }
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".debug"
+            resValue "string", "app_name", "android-mvvm-template DEV"
         }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+//        abortOnError false
+        disable 'GoogleAppIndexingWarning'
     }
 }
 
@@ -59,6 +80,10 @@ dependencies {
     implementation deps.koin.core
     implementation deps.koin.android
     implementation deps.koin.viewmodel
+
+    // Rx
+    implementation deps.rx.rx_java2
+    implementation deps.rx.rx_android
 
     // Stetho
     implementation deps.stetho
