@@ -78,6 +78,7 @@ def room = [:]
 room.runtime = "androidx.room:room-runtime:$versions.room"
 room.compiler = "androidx.room:room-compiler:$versions.room"
 room.ktx = "androidx.room:room-ktx:$versions.room"
+room.rxjava2 = "androidx.room:room-rxjava2:$versions.room"
 // AAC - Lifecycle / ViewModel / LiveData
 def lifecycle = [:]
 lifecycle.extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle"
