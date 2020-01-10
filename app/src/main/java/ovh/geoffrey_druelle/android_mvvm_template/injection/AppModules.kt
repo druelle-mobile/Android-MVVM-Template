@@ -10,6 +10,7 @@ import org.koin.dsl.module
 import ovh.geoffrey_druelle.android_mvvm_template.data.local.database.AppDatabase
 import ovh.geoffrey_druelle.android_mvvm_template.data.remote.api.GenericApi
 import ovh.geoffrey_druelle.android_mvvm_template.ui.generic.GenericViewModel
+import ovh.geoffrey_druelle.android_mvvm_template.ui.generic2.Generic2ViewModel
 import ovh.geoffrey_druelle.android_mvvm_template.utils.BASE_URL
 import ovh.geoffrey_druelle.android_mvvm_template.utils.CONNECT_TIMEOUT
 import ovh.geoffrey_druelle.android_mvvm_template.utils.READ_TIMEOUT
@@ -31,6 +32,7 @@ val appModules = module {
 
     // ViewModels modules part
     viewModel { GenericViewModel() }
+    viewModel { Generic2ViewModel() }
 }
 
 fun getModules(): List<Module> {

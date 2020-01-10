@@ -1,4 +1,4 @@
-package ovh.geoffrey_druelle.android_mvvm_template.ui.generic
+package ovh.geoffrey_druelle.android_mvvm_template.ui.generic2
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,7 +14,7 @@ import ovh.geoffrey_druelle.android_mvvm_template.utils.extension.with
 import timber.log.Timber.e
 import kotlin.coroutines.CoroutineContext
 
-class GenericViewModel : BaseViewModel(), CoroutineScope {
+class Generic2ViewModel : BaseViewModel(), CoroutineScope {
 
     override val coroutineContext: CoroutineContext
         get() = Dispatchers.Main + job
