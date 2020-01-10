@@ -16,8 +16,8 @@ abstract class BaseFragment<T: ViewDataBinding> : Fragment(){
 
     protected lateinit var binding: T
         private set
-
-    private var exit: Boolean = false
+    protected lateinit var root: View
+        private set
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,6 +32,8 @@ abstract class BaseFragment<T: ViewDataBinding> : Fragment(){
             false
         )
 
-        return binding.root
+        root = binding.root
+
+        return root
     }
 }
