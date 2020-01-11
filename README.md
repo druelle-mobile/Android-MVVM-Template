@@ -29,6 +29,17 @@ This MVVM pattern is based on :
     * `Constants.kt` with constants used in the project
     * and other folders like *databinding*, etc
 
+### Notes
+
+You will find different interesting things as :
+
+* LiveData
+* Rx
+* DataBinding
+* ViewModels
+
+So do not forget to disable what you do not need.
+
 ### Gradle build and dependencies
 
 Everything has been separated.
